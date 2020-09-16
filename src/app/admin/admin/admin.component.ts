@@ -12,4 +12,23 @@ export class AdminComponent implements OnInit {
   ngOnInit(): void {
   }
 
+  mode:string='over';
+
+  menu=[
+    {
+      name: 'Dashboard',
+      icon: 'dashboard',
+      url:'/admin/dashboard'
+    },
+    {
+      group:'Menu Group',
+      children:[
+        {
+          name:'Image Gallery',
+          icon:'images',
+          url:'/admin/gallery'
+        }
+      ]
+    }
+  ]
 }
