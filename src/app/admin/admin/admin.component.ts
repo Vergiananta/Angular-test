@@ -12,7 +12,7 @@ export class AdminComponent implements OnInit {
   ngOnInit(): void {
   }
 
-  mode:string='over';
+  mode:string='push';
 
   menu=[
     {
