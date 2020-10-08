@@ -6,7 +6,8 @@
     <mat-card-content>
         <div class="uk-flex">
             <span class="uk-width-expand"></span>
-            <button mat-flat-button color="primary">Add Product</button>
+            <!-- (-1) artinya penambahan data baru. jadi memanfaatkan dialog untuk menambahkan data baru sekaligus untuk pembaharuan-->
+            <button mat-flat-button color="primary" (click)="productDetail({},-1)">Add Product</button>
         </div>
         <table class="uk-table uk-table-middle uk-table-divider">
             <thead>
@@ -16,11 +17,11 @@
                 <th>Publisher</th>
                 <th>Year</th>
                 <th>Price</th>
-                <th align="right">#</th>
+                <th align="right">Action</th>
             </thead>
             <tbody>
-                <tr>
-                    <td>1</td>
+                <tr *ngFor="let book of books; let idx=index">
+                    <td>{{idx+1}}</td>
                     <td>{{book.title}}</td>
                     <td>{{book.author}}</td>
                     <td>{{book.publisher}}</td>

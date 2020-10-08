@@ -18,7 +18,8 @@ import {MatCardModule} from '@angular/material/card';
     LoginComponent,
     RegisterComponent,
     PublicComponent,
-    HomeComponent
+    HomeComponent,
+  
   ],
   imports: [
     BrowserModule,

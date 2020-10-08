@@ -7,6 +7,8 @@ import { MatToolbar } from '@angular/material/toolbar';
 import { MaterialDesign } from '../material/material';
 import { GalleryComponent } from './gallery/gallery.component';
 import { ProductComponent } from './product/product.component';
+import { ProductDetailComponent } from './product-detail/product-detail.component';
+import { FormsModule } from '@angular/forms';
 
 
 const router: Routes = [
@@ -32,12 +34,13 @@ const router: Routes = [
 ]
 
 @NgModule({
-  declarations: [AdminComponent, DashboardComponent, GalleryComponent, ProductComponent],
+  declarations: [AdminComponent, DashboardComponent, GalleryComponent, ProductComponent, ProductDetailComponent],
   imports: [
     CommonModule,
     RouterModule.forChild(router),
     // Agar material design terdeteksi maka harus ditambahkan material toolbar disini
-    MaterialDesign
+    MaterialDesign,
+    FormsModule
   ]
 })
 //menggunakan for child karena diatasnya masih ada module
