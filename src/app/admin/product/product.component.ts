@@ -63,4 +63,11 @@ export class ProductComponent implements OnInit {
       }
     })
   }
+
+  deleteProduct(idx){
+    var conf = confirm('Delete item ? ');
+    if (conf) {
+      this.books.splice(idx, 1);
+    }
+  }
 }
